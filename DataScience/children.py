@@ -8,4 +8,11 @@ from itertools import product
 
 possible_children = {'Boy','Girl'}
 all_combinations = set(product(possible_children, repeat=4))
-print(all_combinations)
+
+
+def has_two_boys(outcome):
+    return len([child for child in outcome if child == 'Boy']) == 2
+
+
+prob = utilities.compute_probability(has_two_boys, all_combinations)
+print(f"Probability of 2 boys {prob}")
