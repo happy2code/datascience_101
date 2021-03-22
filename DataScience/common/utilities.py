@@ -12,3 +12,6 @@ def compute_probability(event_condition, generic_sample_space):
         event_size = sum(generic_sample_space[outcome] for outcome in matching_events)
         sample_space_size = sum(generic_sample_space.values())
         return event_size/sample_space_size
+
+def is_in_interval(number, min, max):
+    return min <= number <= max
